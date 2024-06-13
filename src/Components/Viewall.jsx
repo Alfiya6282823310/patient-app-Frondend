@@ -14,13 +14,13 @@ const Viewall = () => {
                         <table class="table">
                             <thead>
                                 <tr>
-                                <tr>
+                                
                                     <th>Patient Name</th>
                                     <th>age</th>
                                     <th>Address</th>
                                     <th>Doctor name</th>
                                 </tr>
-                                </tr>
+                                
                             </thead>
                             <tbody>
                                 {
