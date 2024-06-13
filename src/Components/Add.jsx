@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Navar from './Navar'
+import axios from 'axios'
 
 const Add = () => {
   const [data,changeData]=useState(
@@ -14,11 +16,26 @@ const Add = () => {
   }
   const readValue=()=>{
     console.log(data)
+    axios.post("http://localhost:8080/",data).then(
+      (response)=>{
+        console.log(response.data)
+        if (response.data.status=="success") {
+          alert("success")
+        } else {
+          alert("error")
+        }
+      }
+    ).catch(
+      (error)=>{
+        console.log(error)
+      }
+    ).finally()
     
   }
   
   return (
     <div>
+      <Navar/>
       <div className="container">
         <div className="row">
           <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
