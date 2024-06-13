@@ -14,6 +14,7 @@ const Add = () => {
   }
   const readValue=()=>{
     console.log(data)
+    
   }
   
   return (
